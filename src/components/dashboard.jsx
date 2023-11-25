@@ -1,21 +1,33 @@
 import React from 'react'
-import 
-{ BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsFillBellFill}
- from 'react-icons/bs'
- import 
- { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } 
- from 'recharts';
+import s from './css/dashboard.css';
+import { BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsFillBellFill} from 'react-icons/bs'
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from 'recharts';
 
-function Home() {
+function Dashboard() {
 
-    const data = [
-        {
-          name: 'Page A',
-          uv: 4000,
-          pv: 2400,
-          amt: 2400,
-        }
-      ];
+    // const data = [
+    //     {
+    //       name: 'Page A',
+    //       uv: 4000,
+    //       pv: 2400,
+    //       amt: 2400,
+    //     }
+    //   ];
+
+    // useEffect(() => {
+    
+    //     fetchData();
+    //   }, []);
+    
+    //   const fetchData = async () => {
+    //     try {
+    //       const response = await fetch('###backend endpoint###'); // Replace with your backend API endpoint
+    //       const data = await response.json();
+    //       setDashboardData(data);
+    //     } catch (error) {
+    //       console.error('Error retrieving data:', error);
+    //     }
+    //   };
      
 
   return (
@@ -64,4 +76,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Dashboard
