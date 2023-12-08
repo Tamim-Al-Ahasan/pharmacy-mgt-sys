@@ -6,16 +6,17 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import OrderStatusForm from "./addTracking";
 
 function createData(name, trackingId, date, status) {
   return { name, trackingId, date, status };
 }
 
 const rows = [
-  createData("Drug A", 18908424, "26 March 2023", "Approved"),
-  createData("Drug B", 18908424, "26 March 2023", "Pending"),
-  createData("Drug C", 18908424, "26 March 2023", "Approved"),
-  createData("Drug D", 18908421, "26 March 2023", "Delivered"),
+  createData("Drug A", 1, "26 March 2023", "Approved"),
+  createData("Drug B", 2, "26 March 2023", "Pending"),
+  createData("Drug C", 3, "26 March 2023", "Approved"),
+  createData("Drug D", 4, "26 March 2023", "Delivered"),
 ];
 
 
@@ -42,6 +43,10 @@ const makeStyle = (status) => {
 
 export default function Order_Table() {
   return (
+    <>
+    <div>
+      <OrderStatusForm/>
+    </div>
     <div className="Table">
       <h3>Recent Orders</h3>
       <TableContainer
@@ -79,5 +84,6 @@ export default function Order_Table() {
         </Table>
       </TableContainer>
     </div>
+    </>
   );
 }

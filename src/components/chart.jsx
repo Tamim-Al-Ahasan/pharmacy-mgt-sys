@@ -1,52 +1,43 @@
-import React, { useState, useEffect } from 'react';
-import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import React from 'react';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
-const GraphAndChart = () => {
-//   const [data, setData] = useState([]);
+const ProductSalesChart = () => {
 
-//   useEffect(() => {
-//     // Replace 'your-backend-api-endpoint' with your actual backend API endpoint
-//     fetch('your-backend-api-endpoint')
-//       .then((response) => response.json())
-//       .then((data) => setData(data))
-//       .catch((error) => console.error('Error fetching data:', error));
-//   }, []);
+  // const [data, setData] = useState([]);
 
-  // Sample data
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get('endpoint');
+  //       setData(response.data);
+  //     } catch (error) {
+  //       console.error('Error fetching data:', error);
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, []);
+ 
   const data = [
-    { name: 'A', value: 10, amount: 25 },
-    { name: 'B', value: 20, amount: 15 },
-    { name: 'C', value: 30, amount: 30 },
-    { name: 'D', value: 15, amount: 20 },
+    { name: 'Drug 1', sales: 65 },
+    { name: 'Drug 2', sales: 59 },
+    { name: 'Drug 3', sales: 80 },
+    { name: 'Drug 4', sales: 81 }
   ];
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'row', width: '50%', height: '200px' }}>
-      {/* Line Chart */}
-      <ResponsiveContainer width="50%">
-        <LineChart data={data}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Line type="monotone" dataKey="value" stroke="#8884d8" />
-        </LineChart>
-      </ResponsiveContainer>
-
-      {/* Bar Chart */}
-      <ResponsiveContainer width="50%">
-        <BarChart data={data}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="amount" fill="#82ca9d" />
-        </BarChart>
-      </ResponsiveContainer>
+    <div>
+      <BarChart width={400} height={350} data={data} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+      <h3>Sales Chart</h3>
+        <CartesianGrid strokeDasharray="10 10" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        <Bar dataKey="sales" fill="black" />
+      </BarChart>
     </div>
   );
 };
 
-export default GraphAndChart;
+export default ProductSalesChart;

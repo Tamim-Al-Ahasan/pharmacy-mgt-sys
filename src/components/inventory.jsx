@@ -3,11 +3,13 @@
 import React, { useState, useEffect } from 'react';
 import './css/inventory.css'; // Create a CSS file for styling
 import napa from "./image/napa.jpg"
-
+import { Link } from 'react-router-dom';
 import SearchBar from './searchbar';
+import AddDrugForm from './add-drug';
 
 const InventoryPage = () => {
   const [products, setProducts] = useState([]);
+
 
   useEffect(() => {
 
@@ -138,7 +140,14 @@ const InventoryPage = () => {
   }, []);
 
   return (
-    <><div><SearchBar/></div>
+    <><div>
+
+    <SearchBar/> <AddDrugForm/>
+ 
+    </div>
+
+
+
     
     <div className="inventory-container">
       {products.map((product) => (
