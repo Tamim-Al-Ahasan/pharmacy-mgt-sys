@@ -3,10 +3,31 @@
 import React, { useState, useEffect } from 'react';
 import './css/inventory.css'; // Create a CSS file for styling
 import napa from "./image/napa.jpg"
+
+import SearchBar from './searchbar';
+
 const InventoryPage = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
+
+
+    //   const fetchData = async () => {
+    //     try {
+    //      
+    //       const response = await fetch(//api endpoint//);
+    //       const data = await response.json();
+  
+    //       setProducts(data);
+    //     } catch (error) {
+    //       console.error('Error fetching data:', error);
+    //     }
+    //   };
+  
+    //   fetchData();
+    // }, []);
+
+
     // need to fetch product data
     const fetchedProducts = [
       {
@@ -117,6 +138,8 @@ const InventoryPage = () => {
   }, []);
 
   return (
+    <><div><SearchBar/></div>
+    
     <div className="inventory-container">
       {products.map((product) => (
         <div key={product.id} className="product-card">
@@ -132,6 +155,7 @@ const InventoryPage = () => {
         </div>
       ))}
     </div>
+    </>
   );
 };
 

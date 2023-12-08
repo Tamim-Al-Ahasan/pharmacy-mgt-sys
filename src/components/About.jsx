@@ -1,12 +1,4 @@
 
-// export default function About() {
-//     return (
-//         <>
-//             <h3>This is About Us</h3>
-//         </>
-//     )
-// }
-
 import React from 'react';
 import discount from "./image/discount.png";
 import fast_purchase from "./image/fast_purchase.png"
