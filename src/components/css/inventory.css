@@ -1,0 +1,25 @@
+/* InventoryPage.css */
+
+.inventory-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+  }
+  
+  .product-card {
+    border: 1px solid #13005d;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+  }
+  
+  .product-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .product-details {
+    text-align: center;
+  }
+  

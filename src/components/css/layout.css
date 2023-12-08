@@ -1,0 +1,21 @@
+/* layout.css */
+
+
+  /* Link styling */
+  a {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust the padding as needed */
+    margin: 0 5px; /* Adjust the margin as needed */
+    text-decoration: none;
+    color: #333; /* Link text color */
+    background-color: #fff; /* Link background color */
+    border: 1px solid #333; /* Link border color */
+    border-radius: 5px; /* Adjust the border-radius as needed */
+  }
+  
+  /* Hover effect */
+  a:hover {
+    background-color:whitesmoke; /* Link background color on hover */
+    color:black; /* Link text color on hover */
+  }
+  
